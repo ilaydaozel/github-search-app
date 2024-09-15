@@ -30,11 +30,15 @@ export interface GithubUser {
     name: string;
     description: string;
     language: string;
+    private: boolean;
+    html_url: string;
   }
   
   export interface RepositoriesState {
     repos: GithubRepository[];
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
     error: string | null;
+    filterType: 'all' | 'public' | 'private';
+    filterLanguage: string;
   }
   

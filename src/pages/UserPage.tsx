@@ -1,36 +1,53 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import store, { fetchGithubRepositories } from '../lib/store';
+import store, { fetchGithubRepositories, setFilterType, setFilterLanguage } from '../lib/store';
 import { useParams } from 'react-router-dom';
+import DropdownFilter from '../components/DropdownFilter/DropdownFilter';
 import SearchBar from '../components/SearchBar/SearchBar';
 
-// Lazy load the RepositoryList component
 const RepositoryList = lazy(() => import('../components/Lists/RepositoryList/RepositoryList'));
 
 const UserPage = () => {
   const dispatch = useDispatch<typeof store.dispatch>();
   const { username } = useParams<{ username: string }>();
-  const { repos, status, error } = useSelector((state: ReturnType<typeof store.getState>) => state.repositories);
+  const { repos, status, error, filterType, filterLanguage } = useSelector((state: ReturnType<typeof store.getState>) => state.repositories);
   const [searchTerm, setSearchTerm] = useState('');
+  const [filteredRepos, setFilteredRepos] = useState(repos);
 
-  useEffect(() => {
+  useEffect(() => {    
     if (username) {
       dispatch(fetchGithubRepositories(username));
     }
   }, [dispatch, username]);
 
-  // Filter repositories based on search term
-  const filteredRepos = repos.filter(repo =>
-    repo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    repo.description?.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  useEffect(() => {
+    let result = repos;
+
+    // Apply type filter
+    if (filterType !== 'all') {
+      result = result.filter(repo => repo.private === (filterType === 'private'));
+    }
+
+    // Apply language filter
+    if (filterLanguage !== 'all') {
+      result = result.filter(repo => repo.language === filterLanguage);
+    }
+
+    // Apply search term filter
+    result = result.filter(repo =>
+      repo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      repo.description?.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setFilteredRepos(result);
+  }, [filterType, filterLanguage, searchTerm, repos]);
 
   const handleSearch = (term: string) => {
     setSearchTerm(term);
   };
 
   if (status === 'loading') {
-    return <div>Loading user data...</div>;
+    return <div>Loading...</div>;
   }
 
   if (status === 'failed') {
@@ -38,14 +55,43 @@ const UserPage = () => {
   }
 
   return (
-    <div className="relative container w-4/5 flex flex-col flex-grow items-center justify-start gap-16 py-8">
+    <div className='relative container w-4/5 flex flex-col flex-grow items-center justify-start gap-16 py-8'>
       <h1>{username}'s Repositories</h1>
-      
-      {/* Search Bar */}
-      <div className="relative w-1/2 mx-auto mb-4">
+      <div className='w-full flex gap-8 items-center justify-end'>
+        {/* Search Bar */}
         <SearchBar placeholder="Search repositories..." onSearch={handleSearch} />
-      </div>
 
+        {/* Filters */}
+        <div className="flex gap-2">
+            <DropdownFilter
+            id="repo-type"
+            label="Type:"
+            options={[
+                { value: 'all', label: 'All' },
+                { value: 'public', label: 'Public' },
+                { value: 'private', label: 'Private' },
+            ]}
+            selectedValue={filterType}
+            onChange={(value) => dispatch(setFilterType(value as 'all' | 'public' | 'private'))}
+            />
+
+            <DropdownFilter
+            id="repo-language"
+            label="Language:"
+            options={[
+                { value: 'all', label: 'All' },
+                { value: 'JavaScript', label: 'JavaScript' },
+                { value: 'TypeScript', label: 'TypeScript' },
+                { value: 'Python', label: 'Python' },
+                { value: 'Ruby', label: 'Ruby' },
+                // Add more languages here as needed
+            ]}
+            selectedValue={filterLanguage}
+            onChange={(value) => dispatch(setFilterLanguage(value))}
+            />
+        </div>
+        </div>
+      
       <Suspense fallback={<div>Loading repositories...</div>}>
         <div>
           {filteredRepos.length > 0 ? (

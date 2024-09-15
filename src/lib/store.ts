@@ -65,6 +65,8 @@ const repositoriesState: RepositoriesState = {
   repos: [],
   status: 'idle',
   error: null,
+  filterType: 'all',
+  filterLanguage: 'all',
 };
 
 // Async thunk for fetching repositories
@@ -82,7 +84,14 @@ export const fetchGithubRepositories = createAsyncThunk<GithubRepository[], stri
 const repositoriesSlice = createSlice({
   name: 'repositories',
   initialState: repositoriesState,
-  reducers: {},
+  reducers: {
+    setFilterType(state, action: PayloadAction<'all' | 'public' | 'private'>) {
+      state.filterType = action.payload;
+    },
+    setFilterLanguage(state, action: PayloadAction<string>) {
+      state.filterLanguage = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchGithubRepositories.pending, (state) => {
@@ -100,6 +109,7 @@ const repositoriesSlice = createSlice({
   },
 });
 
+export const { setFilterType, setFilterLanguage } = repositoriesSlice.actions;
 
   /*
    * Our app's store configuration goes here.
