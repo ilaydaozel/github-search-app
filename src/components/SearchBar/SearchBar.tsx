@@ -21,7 +21,7 @@ const SearchBar = ({ placeholder = "Search...", onSearch }: SearchBarProps) => {
         value={searchTerm}
         onChange={handleSearchChange}
         placeholder={placeholder}
-        className="min-w-4 w-full p-2 bg-textColor-50 border border-textColor-300 rounded-md focus:outline-none focus:ring-1 focus:ring-textColor-400 shadow-sm"
+        className="min-w-4 w-full p-2 bg-textColor-50 border border-textColor-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
       />
     </div>
   );
