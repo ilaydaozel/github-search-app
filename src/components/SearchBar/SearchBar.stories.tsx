@@ -5,10 +5,8 @@ import SearchBar from './SearchBar';
 
 export default {
   component: SearchBar,
-  title: 'SearchBar',
+  title: 'Components/SearchBar',
   tags: ['autodocs'],
-  //👇 Our exports that end in "Data" are not stories.
-  excludeStories: /.*Data$/,
   args: {
     onSearch: fn,
   },

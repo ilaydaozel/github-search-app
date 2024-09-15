@@ -1,14 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import Navbar from './components/Navbar';
 import Layout from './Layout';
+import { Provider } from 'react-redux';
+import store from './lib/store';
+import UsersList from './components/Lists/UserList/UserList';
 
 function App() {
   return (
     <div id="app">
-     <Layout>
-      <></>
-     </Layout>
+      <Provider store={store}>
+        <Layout>
+          <UsersList></UsersList>
+        </Layout>
+     </Provider>
     </div>
   );
 }
