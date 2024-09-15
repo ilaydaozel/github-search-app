@@ -1,4 +1,3 @@
-import React from 'react';
 import { GithubUser } from '../../../types';
 import { Link } from 'react-router-dom';
 

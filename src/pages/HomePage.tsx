@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import store, { fetchGithubUsers } from '../lib/store';
 import SearchBar from '../components/SearchBar/SearchBar';

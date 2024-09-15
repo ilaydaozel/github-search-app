@@ -1,5 +1,3 @@
-import SearchBar from '../SearchBar/SearchBar';
-
 const Navbar = () => {
     return (
       <nav className="flex justify-between items-center bg-bgColor px-8 py-4 w-full shadow-sm">
