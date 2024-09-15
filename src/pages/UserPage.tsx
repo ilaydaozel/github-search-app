@@ -57,12 +57,12 @@ const UserPage = () => {
   return (
     <div className='relative container w-4/5 flex flex-col flex-grow items-center justify-start gap-16 py-8'>
       <h1>{username}'s Repositories</h1>
-      <div className='w-full flex gap-8 items-center justify-end'>
+      <div className='w-full flex md:flex-row md:items-center flex-col md:gap-8 gap-2 items-end justify-end'>
         {/* Search Bar */}
         <SearchBar placeholder="Search repositories..." onSearch={handleSearch} />
 
         {/* Filters */}
-        <div className="flex gap-2">
+        <div className="w-fit flex gap-2">
             <DropdownFilter
             id="repo-type"
             label="Type:"

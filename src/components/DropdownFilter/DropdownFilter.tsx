@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface DropdownFilterProps {
   id: string;
   label: string;
@@ -14,8 +12,8 @@ const DropdownFilter = ({ id, label, options, selectedValue, onChange }: Dropdow
         id={id}
         value={selectedValue}
         onChange={(e) => onChange(e.target.value)}
-        className="bg-white border border-textColor-300 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary focus:borderprimary p-2"
-      >
+        className="bg-bgColor border border-textColor-300 md:text-base text-sm rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary focus:borderprimary p-2"
+      >        
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {label} {option.label}
