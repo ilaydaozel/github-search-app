@@ -1,9 +1,8 @@
 import UserCard from '../../Cards/UserCard/UserCard';
 import { GithubUser } from '../../../types';
 
-const UsersList = ({ users }: { users: GithubUser[]}) => {
+const UserList = ({ users }: { users: GithubUser[]}) => {
   
-
   // Rendering the list of users
   return (
     <div className="grid grid-cols-2 gap-4">
@@ -14,4 +13,4 @@ const UsersList = ({ users }: { users: GithubUser[]}) => {
   );
 };
 
-export default UsersList;
+export default UserList;
