@@ -28,7 +28,7 @@ const mockUsers: GithubUser[] = [
 ];
 
 // Meta configuration for the story
-const meta: Meta<typeof UserList> = {
+export default {
   title: 'Components/UserList',
   component: UserList,
   tags: ['autodocs'],
@@ -37,26 +37,23 @@ const meta: Meta<typeof UserList> = {
   },
 };
 
-export default meta;
-
-type Story = StoryObj<typeof UserList>;
 
 // Default story showing the list of users
-export const Default: Story = {
+export const Default = {
   args: {
     users: mockUsers,
   },
 };
 
 // Empty state story (no users)
-export const Empty: Story = {
+export const Empty = {
   args: {
     users: [],
   },
 };
 
 // Large list story to show many users
-export const LargeList: Story = {
+export const LargeList = {
   args: {
     users: [...Array(50)].map((_, index) => ({
       id: index,
