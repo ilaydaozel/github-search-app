@@ -1,17 +1,23 @@
-import Layout from './Layout';
+import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import store from './lib/store';
+import Layout from './Layout';
 import HomePage from './pages/HomePage';
+import UserPage from './pages/UserPage'; // Ensure you have a UserPage component
 
 function App() {
   return (
-    <div id="app">
-      <Provider store={store}>
+    <Provider store={store}>
+      <Router>
         <Layout>
-          <HomePage></HomePage>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/user/:username" element={<UserPage />} />
+          </Routes>
         </Layout>
-     </Provider>
-    </div>
+      </Router>
+    </Provider>
   );
 }
 
