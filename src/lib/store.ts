@@ -8,7 +8,7 @@ import {
    createAsyncThunk,
    PayloadAction,
   } from '@reduxjs/toolkit';
-import { GithubUser, UsersState } from '../types';
+import { GithubRepository, GithubUser, RepositoriesState, UsersState } from '../types';
 
   
   /*
@@ -16,7 +16,7 @@ import { GithubUser, UsersState } from '../types';
    * Usually, you would fetch this from a server. Let's not worry about that now
    */
   
-  const initialState: UsersState = {
+  const usersState: UsersState = {
     users: [],
     status: 'idle',
     error: null,
@@ -39,7 +39,7 @@ import { GithubUser, UsersState } from '../types';
     
   const usersSlice = createSlice({
     name: 'users',
-    initialState,
+    initialState: usersState,
     reducers: {
       // Define any synchronous actions if needed
     },
@@ -61,6 +61,46 @@ import { GithubUser, UsersState } from '../types';
   });
 
   
+const repositoriesState: RepositoriesState = {
+  repos: [],
+  status: 'idle',
+  error: null,
+};
+
+// Async thunk for fetching repositories
+export const fetchGithubRepositories = createAsyncThunk<GithubRepository[], string>(
+  'repositories/fetchGithubRepositories',
+  async (username: string) => {
+    const response = await fetch(`https://api.github.com/users/${username}/repos`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch repositories');
+    }
+    return response.json();
+  }
+);
+
+const repositoriesSlice = createSlice({
+  name: 'repositories',
+  initialState: repositoriesState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchGithubRepositories.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+      })
+      .addCase(fetchGithubRepositories.fulfilled, (state, action: PayloadAction<GithubRepository[]>) => {
+        state.status = 'succeeded';
+        state.repos = action.payload;
+      })
+      .addCase(fetchGithubRepositories.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message || 'Something went wrong';
+      });
+  },
+});
+
+
   /*
    * Our app's store configuration goes here.
    * Read more about Redux's configureStore in the docs:
@@ -69,6 +109,7 @@ import { GithubUser, UsersState } from '../types';
   const store = configureStore({
     reducer: {
       users: usersSlice.reducer,
+      repositories: repositoriesSlice.reducer,
     },
   });
   

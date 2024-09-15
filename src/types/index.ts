@@ -25,3 +25,16 @@ export interface GithubUser {
     error: string | null;
   }
   
+  export interface GithubRepository {
+    id: number;
+    name: string;
+    description: string;
+    language: string;
+  }
+  
+  export interface RepositoriesState {
+    repos: GithubRepository[];
+    status: 'idle' | 'loading' | 'succeeded' | 'failed';
+    error: string | null;
+  }
+  
