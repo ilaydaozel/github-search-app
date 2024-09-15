@@ -1,17 +1,21 @@
+import React from 'react';
 import { GithubRepository } from '../../../types';
+import { Link } from 'react-router-dom';
 
 interface RepositoryCardProps {
   repository: GithubRepository;
 }
 
-const RepositoryCard = ({ repository }: RepositoryCardProps) => {
+const RepositoryCard: React.FC<RepositoryCardProps> = ({ repository }) => {
   return (
-    <div className="bg-bgColor shadow-lg rounded-md p-4 flex flex-col space-y-2 border border-textColor-200 transition duration-300 hover:translate-y-1">
-      <h3 className="text-xl font-semibold text-primary">{repository.name}</h3>
-      <p className="text-textColor-600">{repository.description}</p>
-      <span className="text-sm text-textColor-500">{repository.language}</span>
-    </div>
+    <Link to={repository.html_url} className="bg-bgColor flex flex-col gap-2 shadow-md rounded-md p-4 border border-textColor-200 transition duration-300 hover:translate-y-1">
+      <h2 className="text-lg font-semibold text-primary">{repository.name}</h2>
+      <div className="text-sm text-textColor-600">{repository.description}</div>
+      <div className='flex gap-2 text-textColor-400 text-xs'>
+        <p>{repository.private ? 'Private' : 'Public'}</p>
+        <p>{repository.language}</p>
+      </div>  
+    </Link>
   );
 };
-
 export default RepositoryCard;

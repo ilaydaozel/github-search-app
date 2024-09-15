@@ -84,7 +84,8 @@ const UserPage = () => {
                 { value: 'TypeScript', label: 'TypeScript' },
                 { value: 'Python', label: 'Python' },
                 { value: 'Ruby', label: 'Ruby' },
-                // Add more languages here as needed
+                { value: 'Erlang', label: 'Erlang' },
+                { value: 'CSS', label: 'CSS' },
             ]}
             selectedValue={filterLanguage}
             onChange={(value) => dispatch(setFilterLanguage(value))}
