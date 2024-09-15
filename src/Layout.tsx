@@ -8,15 +8,11 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen justify-between">
+    <div className="w-full flex flex-col min-h-screen justify-between items-center">
       {/* Navbar at the top */}
       <Navbar />
-
-      {/* Main content area */}
-      <main>
-        {children}
-      </main>
-
+      {/* Child content area */}
+      {children}
       {/* Footer at the bottom */}
       <Footer />
     </div>
