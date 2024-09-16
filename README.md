@@ -26,7 +26,7 @@ You can view the live application deployed on Netlify [here](https://master--zes
 
 ## Figma Design
 
-The wireframes and UI design for this project were first created in **Figma** to ensure a well-thought-out and responsive layout. You can view the Figma design file [here(https://www.figma.com/design/UQz4iiw5HcGa6xfWJcbxo3/Github-Search-App?node-id=1-361&t=3abPMumnBD6siPQJ-1).
+The wireframes and UI design for this project were first created in **Figma** to ensure a well-thought-out and responsive layout. You can view the Figma design file [here](https://www.figma.com/design/UQz4iiw5HcGa6xfWJcbxo3/Github-Search-App?node-id=1-361&t=3abPMumnBD6siPQJ-1).
 
 
 ## Screenshots
@@ -93,12 +93,12 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
   5. Start the Storybook server:
-  ```bash
-  npm run storybook --watch
+     ```bash
+     npm run storybook --watch
 
   6. Open your browser and go to:
-  ```bash
-  http://localhost:6006
+     ```bash
+     http://localhost:6006
 
 ### `API Integration`
 The app uses [the official GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) to fetch user profile and repository data. Make sure to adhere to GitHub's rate limits and authentication if necessary.
