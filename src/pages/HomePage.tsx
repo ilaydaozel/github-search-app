@@ -34,9 +34,9 @@ const HomePage = () => {
   }
 
   return (
-    <div className="relative container w-4/5 flex flex-col flex-grow items-center justify-start gap-16 py-8">
+    <div className="relative container w-4/5 flex flex-col flex-grow items-center justify-start gap-8 md:gap-16 py-12">
       {/* Search Bar */}
-      <div className='w-1/2'>
+      <div className='w-full md:w-1/2'>
         <SearchBar placeholder="Search GitHub user..." onSearch={handleSearch} />
       </div>
 

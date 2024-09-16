@@ -56,10 +56,10 @@ const UserPage = () => {
 
   return (
     <div className='relative container w-5/6 flex-grow py-16'>
-      <div className='w-full grid grid-cols-1 lg:grid-cols-4 gap-4'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-4 gap-12 md:gap-4'>
          {/* Conditionally render UserBio only if the owner exists */}
          {repos[0]?.owner && <UserBio user={repos[0].owner} />}
-        <div className='flex flex-col items-center justify-start gap-16 lg:col-span-3'>
+        <div className='flex flex-col items-center justify-start md:gap-16 gap-8 lg:col-span-3'>
             <div className='w-full flex md:flex-row md:items-center flex-col md:gap-8 gap-2 items-end justify-end'>
                 {/* Search Bar */}
                 <SearchBar placeholder="Search repositories..." onSearch={handleSearch} />
