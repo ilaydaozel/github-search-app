@@ -28,6 +28,14 @@ You can view the live application deployed on Netlify [here](https://master--zes
 
 The wireframes and UI design for this project were first created in **Figma** to ensure a well-thought-out and responsive layout. You can view the Figma design file [here](https://www.figma.com/design/UQz4iiw5HcGa6xfWJcbxo3/Github-Search-App?node-id=1-361&t=3abPMumnBD6siPQJ-1).
 
+![image](https://github.com/user-attachments/assets/384b2dfc-2ace-4ad5-942d-276da321fab1)
+Homepage
+
+![image](https://github.com/user-attachments/assets/59acba97-8f02-41f0-8a39-591bd79af04e)
+User page
+
+![image](https://github.com/user-attachments/assets/2711b690-edc4-4a12-b33a-07aa1d290ebf)
+Wireframes and components
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/ed024471-5ef9-41b7-8d95-02cf8d9548a1)
@@ -86,11 +94,7 @@ Make sure you have the following installed:
     npm start
 
   4. Open your browser and go to:
-    ```bash
-    http://localhost:3000
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    [http://localhost:3000](http://localhost:3000)
 
   5. Start the Storybook server:
      ```bash
