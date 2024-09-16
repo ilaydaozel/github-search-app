@@ -12,7 +12,7 @@ const mockUser: GithubUser = {
 
 // Meta configuration for Storybook
 export default {
-  title: 'Components/UserCard',
+  title: 'Components/Cards/UserCard',
   component: UserCard,
   tags: ['autodocs'],
   args: {
