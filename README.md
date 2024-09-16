@@ -3,7 +3,6 @@
 GitHub Repository Explorer is a web application that allows users to search for a GitHub user and view their repositories. It provides a user-friendly interface to filter repositories by type (public/private) and programming language and search by name. The app is built using **React**, **Redux**, **TypeScript**, **Tailwind CSS**, **Storybook**, with the design and wireframes created in **Figma**. The app is deployed on **Netlify**, and Storybook is deployed on **Chromatic**.
 
 ## Features
-- 
 - Search for a GitHub user and display their profile information.
 - Search for repositories by name.
 - View the user's repositories with options to filter by type and language.
