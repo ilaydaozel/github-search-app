@@ -32,6 +32,7 @@ export interface GithubUser {
     language: string;
     private: boolean;
     html_url: string;
+    owner: GithubUser;
   }
   
   export interface RepositoriesState {
