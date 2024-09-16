@@ -100,10 +100,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
      ```bash
      http://localhost:6006
 
-### `API Integration`
+### API Integration
 The app uses [the official GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) to fetch user profile and repository data. Make sure to adhere to GitHub's rate limits and authentication if necessary.
 
-### `Future Improvements`
+### Future Improvements
   - Add pagination for repositories to handle users with a large number of repos.
   - Have a more detailed view of user profile and repositories.
   - Add more filters, such as sorting repositories by stars, forks, or creation date.
