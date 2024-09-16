@@ -9,7 +9,7 @@ interface DropdownFilterProps {
 /**
  * A component that renders a dropdown filter with a label and options.
  * 
- * This component displays a dropdown menu with the provided options. It also includes a hidden label for accessibility.
+ * This component displays a dropdown menu with the provided options.
  * When the user selects an option, the `onChange` callback is invoked with the selected value.
  * 
  */
