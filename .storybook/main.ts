@@ -10,11 +10,12 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
     'storybook-addon-remix-react-router',
+    '@storybook/addon-a11y',
   ],
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
   },
-  staticDirs: ["..\\public"],
+  staticDirs: ["../public"],
 };
 export default config;
