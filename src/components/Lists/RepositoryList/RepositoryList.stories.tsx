@@ -1,6 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
 import RepositoryList from './RepositoryList';
-import RepositoryCard from '../../Cards/RepositoryCard/RepositoryCard';
 import { GithubRepository } from '../../../types';
 
 // Mock data for the story

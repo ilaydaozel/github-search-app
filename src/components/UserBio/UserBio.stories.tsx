@@ -1,4 +1,3 @@
-import { Meta, StoryObj } from '@storybook/react';
 import UserBio from './UserBio';
 import { GithubUser } from '../../types';
 

@@ -1,5 +1,3 @@
-// DropdownFilter.stories.tsx
-import { Meta, StoryObj } from '@storybook/react';
 import DropdownFilter from './DropdownFilter';
 
 export default {

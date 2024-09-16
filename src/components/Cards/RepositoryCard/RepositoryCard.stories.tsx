@@ -1,4 +1,3 @@
-import { Meta, StoryObj } from '@storybook/react';
 import RepositoryCard from './RepositoryCard';
 import { GithubRepository } from '../../../types';
 
