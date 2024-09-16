@@ -24,18 +24,48 @@ GitHub Repository Explorer is a web application that allows users to search for 
 ## Live Demo
 You can view the live application deployed on Netlify [here](https://master--zesty-elf-a46d60.netlify.app/).
 
-## Figma Design
+## Getting Started
 
-The wireframes and UI design for this project were first created in **Figma** to ensure a well-thought-out and responsive layout. You can view the Figma design file [here](https://www.figma.com/design/UQz4iiw5HcGa6xfWJcbxo3/Github-Search-App?node-id=1-361&t=3abPMumnBD6siPQJ-1).
+### Prerequisites
+Make sure you have the following installed:
+- Node.js (>=14.x)
+- npm (or yarn)
 
-![image](https://github.com/user-attachments/assets/384b2dfc-2ace-4ad5-942d-276da321fab1)
-Homepage
+### Installation
 
-![image](https://github.com/user-attachments/assets/59acba97-8f02-41f0-8a39-591bd79af04e)
-User page
+1. Clone this repository:
 
-![image](https://github.com/user-attachments/assets/2711b690-edc4-4a12-b33a-07aa1d290ebf)
-Wireframes and components
+   ```bash
+   git clone https://github.com/ilaydaozel/github-search-app.git
+   cd github-search-app
+
+
+ 2. Install the dependencies:
+    ```bash
+    npm install
+
+ 3. Running the Application
+    Start the development server:
+    ```bash
+    npm start
+
+  4. Open your browser and go to:
+    [http://localhost:3000](http://localhost:3000)
+
+  5. Start the Storybook server:
+     ```bash
+     npm run storybook --watch
+     
+  6. Open your browser and go to:
+     [http://localhost:6006](http://localhost:6006).
+     
+  7. Testing Storybook:
+     ```bash
+     npm run test-storybook --watch
+
+   This command will execute the interaction tests for the user page and home page written in Storybook.
+   ![image](https://github.com/user-attachments/assets/27e0a942-e132-4ed7-a91f-39eb1e9acee3)
+   
 
 ## Storybook 
 ![image](https://github.com/user-attachments/assets/8e9d48ca-1a09-4faf-bb04-08645d51e010)
@@ -73,51 +103,18 @@ Homepage - Mobile view
 
 User page - Mobile view 
 
+## Figma Design
 
+The wireframes and UI design for this project were first created in **Figma** to ensure a well-thought-out and responsive layout. You can view the Figma design file [here](https://www.figma.com/design/UQz4iiw5HcGa6xfWJcbxo3/Github-Search-App?node-id=1-361&t=3abPMumnBD6siPQJ-1).
 
-## Getting Started
+![image](https://github.com/user-attachments/assets/384b2dfc-2ace-4ad5-942d-276da321fab1)
+Homepage
 
-### Prerequisites
-Make sure you have the following installed:
-- Node.js (>=14.x)
-- npm (or yarn)
+![image](https://github.com/user-attachments/assets/59acba97-8f02-41f0-8a39-591bd79af04e)
+User page
 
-### Installation
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/ilaydaozel/github-repo-explorer.git
-   cd github-repo-explorer
-
-
- 2. Install the dependencies:
-    ```bash
-    npm install
-
- 3. Running the Application
-    Start the development server:
-    ```bash
-    npm start
-
-  4. Open your browser and go to:
-    [http://localhost:3000](http://localhost:3000)
-
-  5. Start the Storybook server:
-     ```bash
-     npm run storybook --watch
-
-  6. Open your browser and go to:
-     ```bash
-     http://localhost:6006
-   
-  7.Testing Storybook:
-  
-     npm run test-storybook --watch
-    
-
-This command will execute the interaction tests for the user page and home page written in Storybook.
-![image](https://github.com/user-attachments/assets/27e0a942-e132-4ed7-a91f-39eb1e9acee3)
+![image](https://github.com/user-attachments/assets/2711b690-edc4-4a12-b33a-07aa1d290ebf)
+Wireframes and components
 
 ### API Integration
 The app uses [the official GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) to fetch user profile and repository data. Make sure to adhere to GitHub's rate limits and authentication if necessary.
