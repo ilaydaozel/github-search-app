@@ -16,7 +16,6 @@ const HomePage = () => {
     dispatch(fetchGithubUsers());
   }, [dispatch]);
 
-  console.log("users", users)
   // Filter users based on search term
   const filteredUsers = users.filter((user: GithubUser) => 
     user.login.toLowerCase().includes(searchTerm.toLowerCase())
@@ -31,7 +30,7 @@ const HomePage = () => {
   }
 
   if (status === 'failed') {
-    return <div className="error-message">Error: {error}</div>;
+    return <div>Error: {error}</div>;
   }
 
   return (
