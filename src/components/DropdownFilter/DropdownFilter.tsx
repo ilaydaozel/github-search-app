@@ -13,6 +13,7 @@ const DropdownFilter = ({ id, label, options, selectedValue, onChange }: Dropdow
         value={selectedValue}
         onChange={(e) => onChange(e.target.value)}
         className="bg-bgColor border border-textColor-300 md:text-base text-sm rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-primary focus:borderprimary p-2"
+        data-testid={`${id}-filter`}
       >        
         {options.map((option) => (
           <option key={option.value} value={option.value}>
