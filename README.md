@@ -1,6 +1,6 @@
 # GitHub Search App
 
-GitHub Repository Explorer is a web application that allows users to search for a GitHub user and view their repositories. It provides a user-friendly interface to filter repositories by type (public/private) and programming language and search by name. The app is built using **React**, **Redux**, **TypeScript**, **Tailwind CSS**, **Storybook**, with the design and wireframes created in **Figma**. The app is deployed on **Netlify**, and Storybook is deployed on **Chromatic**.
+GitHub Repository Explorer is a web application that allows users to search for a GitHub user and view their repositories. It provides a user-friendly interface to filter repositories by type (public/private) and programming language and search by name. The app is built using **React**, **Redux**, **TypeScript**, **Tailwind CSS**, **Storybook**, with the design and wireframes created in **Figma**. The app is deployed on **Netlify**.**Chromatic** and **GitHub Actions** are used for CI deployment of the Storybook.
 
 ## Features
 - Search for a GitHub user and display their profile information.
@@ -20,6 +20,7 @@ GitHub Repository Explorer is a web application that allows users to search for 
 - **Storybook** for developing, viewing, and testing UI components in isolation.
 - **Figma** wireframes and design prototyping.
 - **Storybook** components deployed on **Chromatic**.
+- **GitHub Actions** for Storybook CI deployment.
 
 ## Live Demo
 You can view the live application deployed on Netlify [here](https://master--zesty-elf-a46d60.netlify.app/).
@@ -68,11 +69,14 @@ Make sure you have the following installed:
    
 
 ## Storybook 
+Deployed at chromatic [here](https://66e835ebc0a951e92894282e-mkosijgqcs.chromatic.com).
 ![image](https://github.com/user-attachments/assets/8e9d48ca-1a09-4faf-bb04-08645d51e010)
-Deployed at chromatic [here](https://66e835ebc0a951e92894282e-iovoubuhsj.chromatic.com/).
 
 ![image](https://github.com/user-attachments/assets/2cc81cb8-8ac6-4a95-8a39-3aaa6ed87978)
 You can find interaction tests and accessibility checks.
+
+![image](https://github.com/user-attachments/assets/6e6f832d-fe5f-4084-b9d5-25132db989d3)
+The components are documented in the Storybook.
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/ed024471-5ef9-41b7-8d95-02cf8d9548a1)
