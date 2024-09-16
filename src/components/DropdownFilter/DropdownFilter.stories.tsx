@@ -5,6 +5,7 @@ import DropdownFilter from './DropdownFilter';
 export default {
   title: 'Components/DropdownFilter',
   component: DropdownFilter,
+  tags: ['autodocs'],
   args: {
     onChange: { action: 'changed' }, // For simulating onChange action in Storybook
   },
