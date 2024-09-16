@@ -1,46 +1,114 @@
-# Getting Started with Create React App
+# GitHub Repository Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GitHub Repository Explorer is a web application that allows users to search for a GitHub user and view their repositories. It provides a user-friendly interface to filter repositories by type (public/private) and programming language and search by name. The app is built using **React**, **Redux**, **TypeScript**, **Tailwind CSS**, **Storybook**, with the design and wireframes created in **Figma**. The app is deployed on **Netlify**.
 
-## Available Scripts
+## Features
+- 
+- Search for a GitHub user and display their profile information.
+- Search for repositories by name.
+- View the user's repositories with options to filter by type and language.
+- Responsive design.
+- Component library documented with **Storybook**.
+- **Figma** wireframes and design prototyping.
+- Deployed on **Netlify**.
 
-In the project directory, you can run:
+## Technologies Used
+- **React** for building the user interface.
+- **Redux** for state management.
+- **TypeScript** for static typing.
+- **Tailwind CSS** for styling.
+- **GitHub API** for fetching user and repository data.
+- **Storybook** for developing, viewing, and testing UI components in isolation.
+- **Figma** wireframes and design prototyping.
 
-### `npm start`
+## Live Demo
+You can view the live application deployed on Netlify [here](https://master--zesty-elf-a46d60.netlify.app/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Figma Design
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The wireframes and UI design for this project were first created in **Figma** to ensure a well-thought-out and responsive layout. You can view the Figma design file [here](https://www.figma.com/design/UQz4iiw5HcGa6xfWJcbxo3/Github-Search-App?node-id=1-361&t=3abPMumnBD6siPQJ-1).
 
-### `npm test`
+![image](https://github.com/user-attachments/assets/384b2dfc-2ace-4ad5-942d-276da321fab1)
+Homepage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/user-attachments/assets/59acba97-8f02-41f0-8a39-591bd79af04e)
+User page
 
-### `npm run build`
+![image](https://github.com/user-attachments/assets/2711b690-edc4-4a12-b33a-07aa1d290ebf)
+Wireframes and components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
+![image](https://github.com/user-attachments/assets/ed024471-5ef9-41b7-8d95-02cf8d9548a1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Homepage - Desktop view
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://github.com/user-attachments/assets/31b2d097-f6dd-4725-91f4-302bad0fa5fc)
 
-### `npm run eject`
+User page - Desktop view
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![image](https://github.com/user-attachments/assets/b7d858d8-5eec-4c38-a20e-46e837c4e340)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+User page - Filtering
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![image](https://github.com/user-attachments/assets/9aaae346-e28a-468a-a5c5-4c3acaac6930)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Homepage - Tablet view
 
-## Learn More
+![image](https://github.com/user-attachments/assets/66e6b17d-ac41-4a8d-94b3-4100fb2dc62a)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+User page - Tablet view
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://github.com/user-attachments/assets/b4e2b6ed-47ab-4999-ab71-89da7744950a)
+
+Homepage - Mobile view 
+
+![image](https://github.com/user-attachments/assets/fd7b3331-f385-4924-8acb-3f242660416b)
+
+User page - Mobile view 
+
+
+
+## Getting Started
+
+### Prerequisites
+Make sure you have the following installed:
+- Node.js (>=14.x)
+- npm (or yarn)
+
+### Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/ilaydaozel/github-repo-explorer.git
+   cd github-repo-explorer
+
+
+ 2. Install the dependencies:
+    ```bash
+    npm install
+
+ 3. Running the Application
+    Start the development server:
+    ```bash
+    npm start
+
+  4. Open your browser and go to:
+    [http://localhost:3000](http://localhost:3000)
+
+  5. Start the Storybook server:
+     ```bash
+     npm run storybook --watch
+
+  6. Open your browser and go to:
+     ```bash
+     http://localhost:6006
+
+### API Integration
+The app uses [the official GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) to fetch user profile and repository data. Make sure to adhere to GitHub's rate limits and authentication if necessary.
+
+### Future Improvements
+  - Add pagination for repositories to handle users with a large number of repos.
+  - Have a more detailed view of user profile and repositories.
+  - Add more filters, such as sorting repositories by stars, forks, or creation date.
+  - Improve error handling for different API failure scenarios (e.g., user not found, rate limits exceeded).
