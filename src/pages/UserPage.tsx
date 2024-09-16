@@ -47,7 +47,7 @@ const UserPage = () => {
   };
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <div data-testid="loading" key={"loading"}>Loading...</div>;
   }
 
   if (status === 'failed') {
