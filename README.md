@@ -1,9 +1,8 @@
-# GitHub Repository Explorer
+# GitHub Search App
 
-GitHub Repository Explorer is a web application that allows users to search for a GitHub user and view their repositories. It provides a user-friendly interface to filter repositories by type (public/private) and programming language and search by name. The app is built using **React**, **Redux**, **TypeScript**, **Tailwind CSS**, **Storybook**, with the design and wireframes created in **Figma**. The app is deployed on **Netlify**.
+GitHub Repository Explorer is a web application that allows users to search for a GitHub user and view their repositories. It provides a user-friendly interface to filter repositories by type (public/private) and programming language and search by name. The app is built using **React**, **Redux**, **TypeScript**, **Tailwind CSS**, **Storybook**, with the design and wireframes created in **Figma**. The app is deployed on **Netlify**, and Storybook is deployed on **Chromatic**.
 
 ## Features
-- 
 - Search for a GitHub user and display their profile information.
 - Search for repositories by name.
 - View the user's repositories with options to filter by type and language.
@@ -20,6 +19,7 @@ GitHub Repository Explorer is a web application that allows users to search for 
 - **GitHub API** for fetching user and repository data.
 - **Storybook** for developing, viewing, and testing UI components in isolation.
 - **Figma** wireframes and design prototyping.
+- **Storybook** components deployed on **Chromatic**.
 
 ## Live Demo
 You can view the live application deployed on Netlify [here](https://master--zesty-elf-a46d60.netlify.app/).
@@ -36,6 +36,13 @@ User page
 
 ![image](https://github.com/user-attachments/assets/2711b690-edc4-4a12-b33a-07aa1d290ebf)
 Wireframes and components
+
+## Storybook 
+![image](https://github.com/user-attachments/assets/8e9d48ca-1a09-4faf-bb04-08645d51e010)
+Deployed at chromatic [here](https://66e835ebc0a951e92894282e-iovoubuhsj.chromatic.com/).
+
+![image](https://github.com/user-attachments/assets/2cc81cb8-8ac6-4a95-8a39-3aaa6ed87978)
+You can find interaction tests and accessibility checks.
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/ed024471-5ef9-41b7-8d95-02cf8d9548a1)
@@ -103,6 +110,14 @@ Make sure you have the following installed:
   6. Open your browser and go to:
      ```bash
      http://localhost:6006
+   
+  7.Testing Storybook:
+  
+     npm run test-storybook --watch
+    
+
+This command will execute the interaction tests for the user page and home page written in Storybook.
+![image](https://github.com/user-attachments/assets/27e0a942-e132-4ed7-a91f-39eb1e9acee3)
 
 ### API Integration
 The app uses [the official GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) to fetch user profile and repository data. Make sure to adhere to GitHub's rate limits and authentication if necessary.
