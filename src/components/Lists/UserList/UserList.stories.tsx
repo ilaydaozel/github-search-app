@@ -1,4 +1,3 @@
-import { Meta, StoryObj } from '@storybook/react';
 import UserList from './UserList';
 import { GithubUser } from '../../../types';
 
@@ -29,7 +28,7 @@ const mockUsers: GithubUser[] = [
 
 // Meta configuration for the story
 export default {
-  title: 'Components/UserList',
+  title: 'Components/Lists/UserList',
   component: UserList,
   tags: ['autodocs'],
   args: {
