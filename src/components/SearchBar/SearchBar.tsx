@@ -1,13 +1,31 @@
 import React, { useState } from 'react';
 
+/**
+ * Props for the SearchBar component.
+ * 
+ * @interface SearchBarProps
+ * @property {string} [placeholder] - The placeholder text for the input field.
+ * @property {(searchTerm: string) => void} onSearch - Callback function to handle search input changes.
+ */
 interface SearchBarProps {
   placeholder?: string;
   onSearch: (searchTerm: string) => void;
 }
 
+/**
+ * A search bar component that allows users to input search terms.
+ * 
+ */
+
 const SearchBar = ({ placeholder = "Search...", onSearch }: SearchBarProps) => {
+  // State to keep track of the current search term.
   const [searchTerm, setSearchTerm] = useState('');
 
+  /**
+   * Handles changes to the search input field.
+   * Updates the search term state and triggers the onSearch callback.
+   * 
+   */
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchTerm(value);

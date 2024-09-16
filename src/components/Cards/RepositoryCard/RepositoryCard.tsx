@@ -6,6 +6,11 @@ interface RepositoryCardProps {
   repository: GithubRepository;
 }
 
+/**
+ * A card component displaying information about a GitHub repository.
+ * 
+ */
+
 const RepositoryCard: React.FC<RepositoryCardProps> = ({ repository }) => {
   return (
     <Link to={repository.html_url} className="bg-bgColor flex flex-col justify-between gap-2 shadow-md rounded-md p-4 border border-textColor-200 transition-transform duration-500 hover:translate-y-1 break-words">
@@ -18,4 +23,5 @@ const RepositoryCard: React.FC<RepositoryCardProps> = ({ repository }) => {
     </Link>
   );
 };
+
 export default RepositoryCard;

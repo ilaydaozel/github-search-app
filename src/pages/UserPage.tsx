@@ -8,6 +8,14 @@ import UserBio from '../components/UserBio/UserBio';
 
 const RepositoryList = lazy(() => import('../components/Lists/RepositoryList/RepositoryList'));
 
+/**
+ * `UserPage` component fetches and displays GitHub repositories for a specific user.
+ * 
+ * This component utilizes Redux for state management and displays a list of repositories
+ * with filters and a search bar. It handles loading and error states and conditionally
+ * renders the user's bio if available.
+ * 
+ */
 const UserPage = () => {
   const dispatch = useDispatch<typeof store.dispatch>();
   const { username } = useParams<{ username: string }>();
@@ -15,12 +23,20 @@ const UserPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredRepos, setFilteredRepos] = useState(repos);
 
+  /**
+   * Fetches the repositories for the specified GitHub user when the username changes.
+   * 
+   */
   useEffect(() => {    
     if (username) {
       dispatch(fetchGithubRepositories(username));
     }
   }, [dispatch, username]);
 
+  /**
+   * Filters the repositories based on the selected filterType, filterLanguage, and searchTerm.
+   * Updates the filteredRepos state whenever repos, filterType, filterLanguage, or searchTerm changes.
+   */
   useEffect(() => {
     let result = repos;
 
@@ -42,6 +58,10 @@ const UserPage = () => {
     setFilteredRepos(result);
   }, [filterType, filterLanguage, searchTerm, repos]);
 
+  /**
+   * Handles the search functionality by updating the searchTerm state.
+   * 
+   */
   const handleSearch = (term: string) => {
     setSearchTerm(term);
   };

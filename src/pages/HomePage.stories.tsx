@@ -51,7 +51,12 @@ export default {
   tags: ['autodocs'],
 };
 
-// Default Story
+/**
+ * Default story for the HomePage component.
+ * 
+ * Simulates user interaction by typing into the search bar and verifying the filtered result.
+ * 
+ */
 export const Default = {
   decorators: [
     (story: any) => (
@@ -72,7 +77,12 @@ export const Default = {
   },
 };
 
-// Loading Story
+/**
+ * Loading state story for the HomePage component.
+ * 
+ * Simulates the loading state by setting the `status` to 'loading'.
+ * 
+ */
 export const Loading = {
   decorators: [
     (story: any) => (
@@ -88,7 +98,12 @@ export const Loading = {
   },
 };
 
-// Error Story
+/**
+ * Error state story for the HomePage component.
+ * 
+ * Simulates the error state by setting the `status` to 'failed' and displaying an error message.
+ * 
+ */
 export const Error = {
   decorators: [
     (story: any) => (
@@ -106,7 +121,12 @@ export const Error = {
   },
 };
 
-// Empty Story
+/**
+ * Empty state story for the HomePage component.
+ * 
+ * Simulates the scenario where no users are returned from the API by setting an empty user list.
+ * 
+ */
 export const Empty = {
   decorators: [
     (story: any) => (

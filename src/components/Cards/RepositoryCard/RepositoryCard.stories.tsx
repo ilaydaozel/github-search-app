@@ -15,10 +15,16 @@ const mockRepository: GithubRepository = {
     avatar_url: 'https://avatars.githubusercontent.com/u/5?v=4',
     html_url: 'https://github.com/octocat',
     repos_url: "https://api.github.com/users/octocat/repos",
-    }
+  }
 };
 
-// Define the component's meta information
+/**
+ * Storybook configuration for the `RepositoryCard` component.
+ * 
+ * This configuration provides a default story for the `RepositoryCard` component
+ * using mock data to illustrate its appearance and functionality.
+ * 
+ */
 export default {
   title: 'Components/Cards/RepositoryCard',
   component: RepositoryCard,

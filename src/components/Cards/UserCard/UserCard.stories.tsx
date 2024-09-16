@@ -11,6 +11,10 @@ const mockUser: GithubUser = {
 };
 
 // Meta configuration for Storybook
+/**
+ * Storybook configuration for the UserCard component.
+ * 
+ */
 export default {
   title: 'Components/Cards/UserCard',
   component: UserCard,
@@ -20,22 +24,12 @@ export default {
   },
 };
 
-// Default story showing a single user card
+/**
+ * Default story showing a single user card.
+ * 
+ */
 export const Default = {
   args: {
     user: mockUser,
-  },
-};
-
-// Story with a different user
-export const AnotherUser = {
-  args: {
-    user: {
-      id: 2,
-      login: 'johnsmith',
-      avatar_url: 'https://avatars.githubusercontent.com/u/123456?v=4',
-      html_url: 'https://github.com/johnsmith',
-      repos_url: "https://api.github.com/users/johnsmith/repos",
-    },
   },
 };

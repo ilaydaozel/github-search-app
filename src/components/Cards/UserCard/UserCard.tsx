@@ -1,6 +1,13 @@
 import { GithubUser } from '../../../types';
 import { Link } from 'react-router-dom';
 
+/**
+ * UserCard component displays information about a GitHub user.
+ * 
+ * This component creates a card that includes the user's avatar and login name.
+ * It is a link that navigates to the user's detailed profile page.
+ * 
+ */
 interface UserCardProps {
   user: GithubUser
 }

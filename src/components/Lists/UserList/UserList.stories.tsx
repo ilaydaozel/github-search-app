@@ -1,7 +1,7 @@
 import UserList from './UserList';
 import { GithubUser } from '../../../types';
 
-// Mock user data
+// Mock user data for testing
 const mockUsers: GithubUser[] = [
   {
     id: 1,
@@ -26,7 +26,7 @@ const mockUsers: GithubUser[] = [
   },
 ];
 
-// Meta configuration for the story
+// Meta configuration for the Storybook story
 export default {
   title: 'Components/Lists/UserList',
   component: UserList,
@@ -36,22 +36,36 @@ export default {
   },
 };
 
-
-// Default story showing the list of users
+/**
+ * Default story showcasing a list of mock users.
+ * 
+ * This story displays a basic list of users using predefined mock data. 
+ * It serves as a demonstration of the `UserList` component's default state.
+ */
 export const Default = {
   args: {
     users: mockUsers,
   },
 };
 
-// Empty state story (no users)
+/**
+ * Empty state story for the `UserList` component.
+ * 
+ * This story demonstrates how the `UserList` component looks when no user data is provided.
+ * It is useful for testing the component's behavior and appearance in an empty state.
+ */
 export const Empty = {
   args: {
     users: [],
   },
 };
 
-// Large list story to show many users
+/**
+ * Large list story for the `UserList` component.
+ * 
+ * This story displays a large number of mock users to test the component's performance 
+ * and visual appearance with a large dataset.
+ */
 export const LargeList = {
   args: {
     users: [...Array(50)].map((_, index) => ({
