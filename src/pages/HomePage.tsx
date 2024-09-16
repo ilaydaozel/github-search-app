@@ -16,6 +16,7 @@ const HomePage = () => {
     dispatch(fetchGithubUsers());
   }, [dispatch]);
 
+  console.log("users", users)
   // Filter users based on search term
   const filteredUsers = users.filter((user: GithubUser) => 
     user.login.toLowerCase().includes(searchTerm.toLowerCase())
@@ -26,7 +27,7 @@ const HomePage = () => {
   };
 
   if (status === 'loading') {
-    return <div>Loading users...</div>;
+    return <div data-testid="loading" key={"loading"}>Loading users...</div>;
   }
 
   if (status === 'failed') {
