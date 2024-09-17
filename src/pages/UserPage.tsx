@@ -76,7 +76,7 @@ const UserPage = () => {
 
   return (
     <div className='relative container w-5/6 flex-grow py-16'>
-      <div className='w-full grid grid-cols-1 lg:grid-cols-4 gap-16 md:gap-4'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-4'>
          {/* Conditionally render UserBio only if the owner exists */}
          {repos[0]?.owner && <UserBio user={repos[0].owner} />}
         <div className='flex flex-col items-center justify-start md:gap-16 gap-8 lg:col-span-3'>
