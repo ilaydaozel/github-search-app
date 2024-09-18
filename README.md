@@ -120,6 +120,9 @@ User page
 ![image](https://github.com/user-attachments/assets/2711b690-edc4-4a12-b33a-07aa1d290ebf)
 Wireframes and components
 
+## Notion Page for Documentation
+[Notion page](https://chatter-comfort-34a.notion.site/GitHub-Search-App-by-layda-zel-103f2ae1cd8c8013808bf9e5bbd8f79c?pvs=4)
+
 ### API Integration
 The app uses [the official GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28) to fetch user profile and repository data. Make sure to adhere to GitHub's rate limits and authentication if necessary.
 
